@@ -59,8 +59,7 @@ func animacio(velocitat):
 		$AnimatedSprite.play("stand")
 	if velocitat.y > 0:
 		$AnimatedSprite.play("saltar")
-		
 
-func _on_Area2D_area_entered(area):
-	if (area.name == "Personatge"):
-		get_tree().change_scene("res://objectes/Terra_morir.tscn")
+
+func _on_Arrivada_body_entered(body):
+	get_tree().change_scene("res://escenes/Arrivada.gd")
